@@ -1,19 +1,21 @@
 import React from 'react';
 
-const HeroBanner = () => {
+const HeroBanner = ({ bannerData }) => {
+  console.log(bannerData);
   return (
     <div className='hero-banner-container'>
       <div>
-        <p className='beats-solo'>SMALL TEXT</p>
-        <h3>MID TEXT</h3>
-        <img src='' alt='headphones' className='hero-banner-image' />
+        <p className='beats-solo'>{bannerData.smallText}</p>
+        <h3>{bannerData.midText}</h3>
+        <h1>{bannerData.largeText}</h1>
+        <img src={bannerData.img} alt='headphones' className='hero-banner-image' />
         <div>
           {/* <link href='/product/ID'> */}
-            <button type='button'>BUTTON TEXT</button>
+            <button type='button'>{bannerData.buttonText}</button>
           {/* </link> */}
           <div className='desc'>
             <h5>Description</h5>
-            <p>DESCRIPTION</p>
+            <p>{bannerData.description}</p>
           </div>
         </div>
       </div>

@@ -1,10 +1,11 @@
 import React from 'react';
 import { HeroBanner, FooterBanner } from '../../components';
+import bannerData from '../../assets/data/banner';
 
 const Home = () => {
   return (
     <>
-      <HeroBanner />
+      <HeroBanner bannerData={bannerData} />
       <div className='products-heading'>
         <h2>Best Selling Productos</h2>
         <p>Speakers of many variations</p>

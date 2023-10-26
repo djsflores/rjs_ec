@@ -1,12 +1,12 @@
 import React from 'react';
 import { AiOutlineShopping } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <div className='navbar-container'>
       <p className='logo'>
-        {/* <link href='/'>eCommerce</link> */}
-        eCommerce
+        <Link to='/'>eCommerce</Link>
       </p>
       <button type='button' className='cart-icon' onClick="">
         <AiOutlineShopping />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HeroBanner = ({ bannerData }) => {
   console.log(bannerData);
@@ -10,9 +11,9 @@ const HeroBanner = ({ bannerData }) => {
         <h1>{bannerData.largeText}</h1>
         <img src={bannerData.img} alt='headphones' className='hero-banner-image' />
         <div>
-          {/* <link href='/product/ID'> */}
+          <Link to='/product/ID'>
             <button type='button'>{bannerData.buttonText}</button>
-          {/* </link> */}
+          </Link>
           <div className='desc'>
             <h5>Description</h5>
             <p>{bannerData.description}</p>

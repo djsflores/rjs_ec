@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeroBanner, FooterBanner, Product } from '../../components';
+import { HeroBanner, FooterBanner, ProductCard } from '../../components';
 import bannerData from '../../assets/data/banner';
 import productData from '../../assets/data/product';
 import productImgData from '../../assets/data/product_img';
@@ -14,7 +14,7 @@ const Home = () => {
       </div>
 
       <div className='products-container'>
-        {productData?.slice(0, 8).map((product) => <Product
+        {productData?.slice(0, 8).map((product) => <ProductCard
             key={product.id}
             productData={product}
             productImgData={productImgData.filter(item => item.product_id === product.id)} />)}

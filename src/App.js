@@ -5,6 +5,7 @@ import Home from './pages/Home/Home';
 import './styles/globals.css';
 import { Footer, Navbar } from './components';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
+import ProductDetails from './pages/ProductDetails/ProductDetails';
 
 const App = () => {
   return (
@@ -19,6 +20,8 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/*' element={<ErrorPage />} />
+          {/* <Route path='/detail' element={<ProductDetails />} /> */}
+          <Route path='/detail/:productId' element={<ProductDetails />} />
         </Routes>
       </main>
     <footer>
